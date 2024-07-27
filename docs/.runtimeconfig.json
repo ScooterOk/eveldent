@@ -1,0 +1,25 @@
+{
+  "general": {
+    "client_domain": "https://staging.excelkits.com"
+  },
+  "postmark": {
+    "api_key": "82dc0b18-e514-4b65-a759-6a4c2badcfbc",
+    "team_invite_template_id": "26955601",
+    "welcome_template_id": "26954331"
+  },
+  "stripe": {
+    "test_key": "sk_test_51LCi0YLxsoD5ZUOMgq4IypltNKGzyLRgcqdeOdGFzHaRaTMdusjWrvEErPK3oVtrRM02vuHNLStS6nTG0i7vgjrj00sRMXheJM",
+    "starter_seat_id": "price_1M4tfBLxsoD5ZUOMsUqo236j",
+    "business_seat_id": "price_1LCi4dLxsoD5ZUOM6Detgmqb",
+    "publishable_key": "pk_test_51LCi0YLxsoD5ZUOMCMvmYkvH6Q5LFcn37wI9PvaMA2v64LwDd0m7hI6S5DT4LwUJXyDOdm8pwNppvX2PdWUAAw7T00bexP2IWg",
+    "secret_key": "sk_test_51LCi0YLxsoD5ZUOMgq4IypltNKGzyLRgcqdeOdGFzHaRaTMdusjWrvEErPK3oVtrRM02vuHNLStS6nTG0i7vgjrj00sRMXheJM",
+    "webhook_secret": "whsec_aoIxuUYKROYcHXZz3w8bV5Bha5J8OGfa",
+    "pro_product_id": "prod_LuX8Lfh0EaSV0j"
+  },
+  "fb": {
+    "storage_bucket": "excelkits-staging.appspot.com"
+  },
+  "integrations": {
+    "shared_widgets_url": "https://storage.googleapis.com/excelkits.appspot.com/sharedWidgets.json?GoogleAccessId=firebase-adminsdk-7zuw1%40excelkits.iam.gserviceaccount.com&Expires=16446988800&Signature=wbYZAPVplu8zV%2BAq1ziMb5mm8V9iZ33g5Zr0kaeGirIOqFDb3vgbXCj%2FZvwYLR2eOPpkZFbleRC4LJVDsPr7z%2FgOd3XaGVXTvvDL0WFcg3JZu3ZZO6hCDOWEMsNQgzumJt9Mn3ZmSVAnJzCD6Pbwmr7u1KUxYzgSNyZZOdTgk%2FCUOnIdNnn8KA7CJwHJtAOUiqq6nYFVReJ5XjXAZgeFR087bFTT7GWnF1rUpIPD10sUky9xYe3lxKoSyyfJ2gNBrJ%2FdfOMa7DAKZbwWV%2FoP4aSrGpxS6otc3tx8pfx%2F6zLMZdkGWu2CzSipAzN%2FJbSQo3zl%2BKY5jSTmVgtLMftUMQ%3D%3D"
+  }
+}
