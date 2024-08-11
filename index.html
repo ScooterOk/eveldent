@@ -2,92 +2,76 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eveldent - Ваша сяюча посмішка, наша турбота</title>
+    <meta name="robots" content="all" />
+    <meta
+      name="description"
+      content="Стоматологічна клініка Eveldent пропонує професійні послуги для вашої сяючої посмішки. Ми забезпечуємо якісне лікування зубів, імплантацію, ортодонтію та естетичну стоматологію. Ваш ідеальний вибір для здорової усмішки!"
+    />
+    <meta
+      name="keywords"
+      content="Eveldent, стоматологічна клініка, лікування зубів, імплантація, ортодонтія, естетична стоматологія, здорова усмішка, професійні послуги стоматолога"
+    />
+    <meta name="author" content="Eveldent" />
+    <meta charset="UTF-8" />
+    <meta
+      property="og:title"
+      content="Eveldent - Ваша сяюча посмішка, наша турбота"
+    />
+    <meta
+      property="og:description"
+      content="Стоматологічна клініка Eveldent пропонує професійні послуги для вашої сяючої посмішки. Ми забезпечуємо якісне лікування зубів, імплантацію, ортодонтію та естетичну стоматологію."
+    />
+    <meta
+      property="og:image"
+      content="URL до зображення, яке представляє клініку"
+    />
+    <meta property="og:url" content="URL до вашого лендінгу" />
+    <meta property="og:type" content="website" />
   </head>
   <body>
-    <div class="main">
-      <header>
-        <div class="wrapper">
-          <a href="https://vitejs.dev" target="_blank" class="header__logo">
-            <img src="/img/header-logo.png" alt="" />
+    <header class="header">
+      <div class="wrapper">
+        <a href="#hero" class="header__logo">
+          <img src="/img/header-logo.png" alt="" />
+        </a>
+        <ul class="header__menu" id="header__menu">
+          <li>
+            <a href="#benefits">Про клініку</a>
+          </li>
+          <li>
+            <a href="#services">Наші послуги</a>
+          </li>
+          <li>
+            <a href="#prices">Наші ціни</a>
+          </li>
+          <li>
+            <a href="#contacts">Контакти</a>
+          </li>
+          <li class="header_contact">
+            <a href="#contacts" class="button">
+              <span>Знайти нас</span>
+            </a>
+          </li>
+        </ul>
+        <div class="header_contact">
+          <a href="#contacts" class="button">
+            <span>Знайти нас</span>
           </a>
-          <ul class="header__menu">
-            <li>
-              <a href="">Про клініку</a>
-            </li>
-            <li>
-              <a href="">Наші послуги</a>
-            </li>
-            <li>
-              <a href="">Наші ціни</a>
-            </li>
-            <li>
-              <a href="">Контакти</a>
-            </li>
-          </ul>
-          <div class="header_contact">
-            <button>
-              <svg
-                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:cc="http://web.resource.org/cc/"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xmlns:dc="http://purl.org/dc/elements/1.1/"
-                style="
-                  shape-rendering: geometricPrecision;
-                  text-rendering: geometricPrecision;
-                  image-rendering: optimizeQuality;
-                "
-                fill-rule="evenodd"
-                xml:space="preserve"
-                clip-rule="evenodd"
-                viewBox="0 0 58.282 58.282"
-              >
-                <defs>
-                  <style type="text/css">
-                    .fil0 {
-                      fill: currentColor;
-                    }
-                    .fil1 {
-                      fill: currentColor;
-                      fill-rule: nonzero;
-                    }
-                  </style>
-                </defs>
-                <g id="Layer_x0020_1">
-                  <g id="_152222920">
-                    <path
-                      id="_152222248"
-                      class="fil0"
-                      d="m24.186 22.5c-5.4466 3.1445 2.8637 18.724 8.8237 15.283 1.0584 1.8332 4.4676 7.7381 5.526 9.5712-2.5146 1.4519-4.6432 2.3671-7.5585 0.70054-8.0946-4.6273-17.005-20.054-16.751-29.256 0.088046-3.196 1.971-4.4482 4.434-5.8702 1.0584 1.8332 4.4676 7.738 5.526 9.5712z"
-                    />
-                    <path
-                      id="_150519168"
-                      class="fil0"
-                      d="m26.47 22.24c-0.58849 0.33978-1.3458 0.13697-1.6856-0.45158l-5.2095-9.0232c-0.33984-0.58862-0.13704-1.3459 0.45152-1.6857l2.738-1.5808c0.58855-0.33984 1.346-0.13685 1.6858 0.4517l5.2095 9.0231c0.33978 0.58849 0.13691 1.3458-0.45158 1.6856l-2.738 1.5808z"
-                    />
-                    <path
-                      id="_226148072"
-                      class="fil0"
-                      d="m40.702 46.89c-0.58849 0.33978-1.3458 0.13697-1.6856-0.45164l-5.2095-9.0232c-0.33984-0.58855-0.13704-1.3459 0.45152-1.6856l2.738-1.5808c0.58855-0.33978 1.346-0.13679 1.6858 0.4517l5.2095 9.0231c0.33978 0.58855 0.13691 1.3459-0.45158 1.6856l-2.738 1.5808z"
-                    />
-                  </g>
-                  <path
-                    class="fil1"
-                    d="m29.141-2.845e-15h0.0004319v0.006787c8.05 0.0001234 15.335 3.26 20.604 8.5296 5.2693 5.2693 8.5291 12.554 8.5293 20.604h0.006787v0.0013574h-0.006787c-0.0001234 8.05-3.26 15.335-8.5296 20.604-5.2694 5.2693-12.554 8.5291-20.604 8.5293v0.006787h-0.0013574v-0.006787c-8.05-0.0001234-15.335-3.26-20.604-8.5296-5.2693-5.2694-8.5291-12.554-8.5293-20.604h-0.006787v-0.0013574h0.006787c0.0001234-8.05 3.26-15.335 8.5296-20.604 5.2693-5.2693 12.554-8.5291 20.604-8.5293v-0.006787h0.0009255zm0.0004319 3.4758v0.006787h-0.0013574v-0.006787c-7.0792 0.0001851-13.494 2.8753-18.141 7.5226-4.6477 4.6476-7.5229 11.063-7.5229 18.142h0.006787v0.0013574h-0.006787c0.0001851 7.0792 2.8753 13.494 7.5226 18.141 4.6476 4.6477 11.063 7.5229 18.142 7.5229v-0.006787h0.0013574v0.006787c7.0792-0.0001851 13.494-2.8753 18.141-7.5226 4.6477-4.6476 7.5229-11.063 7.5229-18.142h-0.006787v-0.0013574h0.006787c-0.0001851-7.0792-2.8753-13.494-7.5226-18.141-4.6476-4.6477-11.063-7.5229-18.142-7.5229z"
-                  />
-                </g>
-              </svg>
-              <span>Подзвонити нам</span>
-            </button>
-          </div>
         </div>
-      </header>
-
+        <button class="header__burger" id="header__burger">
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <div class="main">
       <!-- HERO -->
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="wrapper">
           <div class="hero__content">
             <h1>Ми подбаємо про здоровʼя ваших зубів</h1>
@@ -96,6 +80,10 @@
               Наша команда професіоналів завжди готова допомогти вам посміхатися
               з упевненістю.
             </p>
+            <button>
+              <img src="/public/img/phone_white.svg" alt="" />
+              <span>Подзвонити нам</span>
+            </button>
           </div>
           <div class="hero__image">
             <img src="/img/9G2A38162.png" alt="" />
@@ -106,7 +94,7 @@
       <!-- / HERO -->
 
       <!-- BENEFITS -->
-      <section class="benefits">
+      <section class="benefits" id="benefits">
         <div class="wrapper">
           <ul>
             <li>
@@ -195,7 +183,7 @@
       <!--/ QUALITY -->
 
       <!-- SERVICES -->
-      <section class="services">
+      <section class="services" id="services">
         <div class="wrapper">
           <h2 class="services__title">Наші <b>Послуги</b></h2>
           <ul class="services__list">
@@ -212,8 +200,8 @@
               <img src="/public/img/services/orthopedics.png" alt="" />
               <h3>Ортопедія</h3>
               <p>
-                Знімні протези, незнімні коронки, мости, імпланти, вініри,
-                люмініри та капи для відновлення та покращення вашої усмішки.
+                Знімні протези, незнімні коронки, мости, імпланти, вініри та
+                капи для відновлення та покращення вашої чарівної усмішки.
               </p>
             </li>
             <li class="services__list_kids">
@@ -277,7 +265,127 @@
         </div>
       </section>
       <!--/ SKILS -->
+
+      <!-- PRICES -->
+      <section class="prices" id="prices">
+        <div class="wrapper">
+          <img
+            src="/public/img/bg-dots-violet.svg"
+            class="prices__bg_1"
+            alt=""
+          />
+          <img src="/public/img/bg-dots-rose.svg" class="prices__bg_2" alt="" />
+
+          <h2>Наші <b>ціни</b></h2>
+          <ul>
+            <li>Консультація лікаря <b>від 150 грн</b></li>
+            <li>Професійна гігієна порожнини рота <b>від 1 300 грн</b></li>
+            <li>Пломбування (фотополімер) <b>від 900 грн</b></li>
+            <li>Коронка (металокераміка) <b>від 3 200 грн</b></li>
+            <li>Коронка (цирконій) <b>від 8 700 грн</b></li>
+            <li>Видалення зуба <b>від 1 250 грн</b></li>
+            <li>Атипове видалення зуба <b>від 2 400 грн</b></li>
+            <li>Встановлення імплантів <b>від 10 000 грн</b></li>
+          </ul>
+        </div>
+      </section>
+      <!--/ PRICES -->
+
+      <!-- CONTACTS -->
+      <section class="contacts" id="contacts">
+        <div class="wrapper">
+          <div class="contacts__rect rect_1"></div>
+          <div class="contacts__rect rect_2"></div>
+          <div class="contacts__rect rect_3"></div>
+          <h2>Наші <b>контакти</b></h2>
+          <div class="contacts__grid">
+            <div class="contacts__map"></div>
+            <ul class="contacts__info">
+              <li class="location">
+                <a
+                  href="https://www.google.com/maps/place/%D0%92%D1%96%D0%B4%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82,+16%2F50,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4279897,30.4286381,19z/data=!3m1!4b1!4m6!3m5!1s0x40d4cc0197f93ec3:0x729478d6902c4438!8m2!3d50.4279888!4d30.4292818!16s%2Fg%2F1td0rdb_?entry=ttu"
+                  target="_blank"
+                  class="contacts__info_icon"
+                >
+                  <img src="/public/img/location-pin.svg" alt="" />
+                </a>
+                <div class="contacts__info_body">
+                  <h3>Розташування</h3>
+                  <p>02000, м. Київ, проспект Відрадний, 16/50</p>
+                </div>
+              </li>
+              <li class="phone">
+                <a href="tel:+38 093 800 7171" class="contacts__info_icon">
+                  <img src="/public/img/phone.svg" alt="" />
+                </a>
+                <div class="contacts__info_body">
+                  <h3>Номер телефону</h3>
+                  <p>+38 (093) 800-71-71</p>
+                </div>
+              </li>
+              <li class="email">
+                <a
+                  href="mailto:stomatologvidradnii@gmail.com"
+                  class="contacts__info_icon"
+                >
+                  <img src="/public/img/email.svg" alt="" />
+                </a>
+                <div class="contacts__info_body">
+                  <h3>Email</h3>
+                  <p>stomatologvidradnii@gmail.com</p>
+                </div>
+              </li>
+              <li class="schedule">
+                <div class="contacts__info_icon">
+                  <img src="/public/img/schedule.svg" alt="" />
+                </div>
+                <div class="contacts__info_body">
+                  <h3>Розклад роботи</h3>
+                  <p>пн-пт: 10:00 - 20:00</p>
+                  <p>сб-нд: Вихідний</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--/ CONTACTS -->
     </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="wrapper">
+        <section class="footer__logo">
+          <img src="/public/img/footer-logo.png" alt="" />
+          <!-- <a href="">Записатися на прийом</a> -->
+          <a
+            href="https://www.google.com/maps/place/%D0%92%D1%96%D0%B4%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82,+16%2F50,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4279897,30.4286381,19z/data=!3m1!4b1!4m6!3m5!1s0x40d4cc0197f93ec3:0x729478d6902c4438!8m2!3d50.4279888!4d30.4292818!16s%2Fg%2F1td0rdb_?entry=ttu"
+            target="_blank"
+            >Знайти нас на мапі</a
+          >
+        </section>
+        <section class="footer__contacts">
+          <div>
+            <p>
+              02000, м. Київ, <br />
+              проспект Відрадний, 16/50
+            </p>
+            <a href="tel:+38 093 800 7171">+38 (093) 800-71-71</a>
+            <a href="mailto:stomatologvidradnii@gmail.com"
+              >stomatologvidradnii@gmail.com</a
+            >
+          </div>
+        </section>
+        <section class="footer__links">
+          <div>
+            <a href="">Про клініку</a>
+            <a href="">Наші послуги</a>
+            <a href="">Наші ціни</a>
+            <a href="">Контакти</a>
+          </div>
+        </section>
+      </div>
+    </footer>
+    <!--/ FOOTER -->
     <script type="module" src="/js/main.js"></script>
   </body>
 </html>

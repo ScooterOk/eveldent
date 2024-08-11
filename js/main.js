@@ -18,4 +18,27 @@ import "../styles/global.scss";
 //   </div>
 // `;
 
-setupCounter(document.querySelector("#counter"));
+const body = document.querySelector("body");
+const header = document.querySelector("header.header");
+const headerBurger = document.querySelector("#header__burger");
+const header__menu = document.querySelector("#header__menu");
+
+window.addEventListener("scroll", () => {
+  const top = window.scrollY;
+  const isFixed = header.classList.contains("fixed");
+  if (top > 32 && !isFixed) {
+    header.classList.add("fixed");
+  } else if (top <= 32 && isFixed) {
+    header.classList.remove("fixed");
+  }
+});
+
+headerBurger.addEventListener("click", () => {
+  body.classList.toggle("burger");
+});
+
+header__menu
+  .querySelectorAll("li a, li button")
+  .forEach((el) =>
+    el.addEventListener("click", () => body.classList.remove("burger"))
+  );
