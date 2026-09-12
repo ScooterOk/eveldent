@@ -1,388 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Eveldent - Ваша сяюча посмішка, наша турбота</title>
-    <meta name="robots" content="all" />
-    <meta
-      name="description"
-      content="Стоматологічна клініка Eveldent пропонує професійні послуги для вашої сяючої посмішки. Ми забезпечуємо якісне лікування зубів, імплантацію, ортодонтію та естетичну стоматологію. Ваш ідеальний вибір для здорової усмішки!"
-    />
-    <meta
-      name="keywords"
-      content="Eveldent, стоматологічна клініка, лікування зубів, імплантація, ортодонтія, естетична стоматологія, здорова усмішка, професійні послуги стоматолога, відрадний, проспект відрадний, київ"
-    />
-    <meta name="author" content="Eveldent" />
-    <meta charset="UTF-8" />
-    <meta
-      property="og:title"
-      content="Eveldent - Ваша сяюча посмішка, наша турбота"
-    />
-    <meta
-      property="og:description"
-      content="Стоматологічна клініка Eveldent пропонує професійні послуги для вашої сяючої посмішки. Ми забезпечуємо якісне лікування зубів, імплантацію, ортодонтію та естетичну стоматологію."
-    />
-    <meta property="og:image" content="/opengraph.jpg" />
-    <meta property="og:url" content="http://vidradny-clinic.kyiv.ua/" />
-    <meta property="og:type" content="website" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="wrapper">
-        <a href="#hero" class="header__logo">
-          <img src="/img/header-logo.png" alt="" />
-        </a>
-        <ul class="header__menu" id="header__menu">
-          <li>
-            <a href="#benefits">Про клініку</a>
-          </li>
-          <li>
-            <a href="#services">Наші послуги</a>
-          </li>
-          <li>
-            <a href="#prices">Наші ціни</a>
-          </li>
-          <li>
-            <a href="#contacts">Контакти</a>
-          </li>
-          <li class="header_contact">
-            <a href="#contacts" class="button">
-              <span>Знайти нас</span>
-            </a>
-          </li>
-        </ul>
-        <div class="header_contact">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eveldent - Ваша сяюча посмішка, наша турбота</title>
+  <meta name="robots" content="all" />
+  <meta name="description"
+    content="Стоматологічна клініка Eveldent пропонує професійні послуги для вашої сяючої посмішки. Ми забезпечуємо якісне лікування зубів, імплантацію, ортодонтію та естетичну стоматологію. Ваш ідеальний вибір для здорової усмішки!" />
+  <meta name="keywords"
+    content="Eveldent, стоматологічна клініка, лікування зубів, імплантація, ортодонтія, естетична стоматологія, здорова усмішка, професійні послуги стоматолога, відрадний, проспект відрадний, київ" />
+  <meta name="author" content="Eveldent" />
+  <meta charset="UTF-8" />
+  <meta property="og:title" content="Eveldent - Ваша сяюча посмішка, наша турбота" />
+  <meta property="og:description"
+    content="Стоматологічна клініка Eveldent пропонує професійні послуги для вашої сяючої посмішки. Ми забезпечуємо якісне лікування зубів, імплантацію, ортодонтію та естетичну стоматологію." />
+  <meta property="og:image" content="/opengraph.jpg" />
+  <meta property="og:url" content="http://vidradny-clinic.kyiv.ua/" />
+  <meta property="og:type" content="website" />
+
+  <link rel="canonical" href="https://www.vidradny-clinic.kyiv.ua/" />
+
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Eveldent - Ваша сяюча посмішка, наша турбота",
+        "url": "https://www.vidradny-clinic.kyiv.ua/",
+        "logo": "https://www.vidradny-clinic.kyiv.ua/img/header-logo.png",
+        "image": "https://www.vidradny-clinic.kyiv.ua/img/header-logo.png",
+        "description": "Стоматологічна клініка Eveldent пропонує професійні послуги для вашої сяючої посмішки. Ми забезпечуємо якісне лікування зубів, імплантацію, ортодонтію та естетичну стоматологію.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "проспект Відрадний, 16/50",
+          "addressLocality": "Київ",
+          "addressCountry": "UA",
+          "postalCode": "02000"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "50.42802809997459",
+          "longitude": "30.429279117789303"
+        },
+        "telephone": "+38 (093) 800-71-71",
+        "email": "stomatologvidradnii@gmail.com",
+        "openingHours": "Mo-Fr 10:00-20:00",
+        "priceRange": "150-20000 UAH",
+        "availableService": [
+          {
+            "@type": "MedicalProcedure",
+            "name": "Консультація лікаря",
+            "price": " від 150 Грн"
+          }, {
+            "@type": "MedicalProcedure",
+            "name": "Професійна гігієна порожнини рота",
+            "price": "від 1 500 грн"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 5,
+          "ratingCount": 6
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "datePublished": "2024-08-28T11:22:03.493074",
+            "reviewBody": "Лікар Єлизавета не лише професіонал своєї справи,а ще й неймовірно приємна співрозмовниця.
+ Процедури пройшли швидко,
+            безболісно.Виконували чистку та працювали з карієсом.Кращого лікаря я ще не зустрічала.Надала обширну консультацію з гігієни,
+            підбору засобів та аксесуарів у догляді за ротовою порожниною.Відповіла на всі питання.Обов 'язково повернуся ще.",
+ "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Альона Качурівська"
+            }
+          }, {
+            "@type": "Review",
+            "datePublished": "2024-08-28T11:22:03.493074",
+            "reviewBody": "Сильна команда лікарів і професійний підхід до роботи. Вже як 6 років разом.  Вирішуємо будь які нюанси з зубами і яснами, які могли виникнути в ході життя. Без нарікань. Вдячність від усієї сімʼї",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Валера Власенко"
+            }
+          }, {
+            "@type": "Review",
+            "datePublished": "2024-08-28T11:22:03.493074",
+            "reviewBody": "Чудова стоматологія! Охайне приміщення зі свіжим ремонтом. Персонал привітний та доброзичливий. Надали якісну консультацію та лікування. Ціни пристойні, оплата офіційна через термінал. Рекомендую!",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Дар'я Охманюк"
+            }
+          }, {
+            "@type": "Review",
+            "datePublished": "2024-08-28T11:22:03.493074",
+            "reviewBody": "Ставив імлпант шостого зуба,все пройшло чудово,без болісно,якісно,лікарі дуже професійні,хоч я і переживав сильно але все пройшло чудово та безболісно. Рекомендую однозначно!!!! 5*",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Vadim Gog"
+            }
+          }, {
+            "@type": "Review",
+            "datePublished": "2024-08-28T11:22:03.493074",
+            "reviewBody": "Дійсно якісно лікують, немає жодних прихованих доплат, дають вичерпну консультацію згідно потреб пацієнта. Дякую лікарям",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Oксана Шереметинська"
+            }
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/eveldent.dental.clinic/"]
+      }
+    </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <a href="#hero" class="header__logo">
+        <img src="/img/header-logo.png" alt="" />
+      </a>
+      <ul class="header__menu" id="header__menu">
+        <li>
+          <a href="#benefits">Про клініку</a>
+        </li>
+        <li>
+          <a href="#services">Наші послуги</a>
+        </li>
+        <li>
+          <a href="#prices">Наші ціни</a>
+        </li>
+        <li>
+          <a href="#contacts">Контакти</a>
+        </li>
+        <li class="header_contact">
           <a href="#contacts" class="button">
             <span>Знайти нас</span>
           </a>
-        </div>
-        <button class="header__burger" id="header__burger">
-          <span></span>
-        </button>
+        </li>
+      </ul>
+      <div class="header_contact">
+        <a href="#contacts" class="button">
+          <span>Знайти нас</span>
+        </a>
       </div>
-    </header>
-    <div class="main">
-      <!-- HERO -->
-      <section class="hero" id="hero">
-        <div class="wrapper">
-          <div class="hero__content">
-            <h1>Ми подбаємо про здоровʼя ваших зубів</h1>
-            <p>
-              Сучасні методи лікування, комфорт та увага до кожного пацієнта.
-              Наша команда професіоналів завжди готова допомогти вам посміхатися
-              з упевненістю.
-            </p>
-            <a href="tel:+38 093 800 7171">
-              <img src="/public/img/phone_white.svg" alt="" />
-              <span>Подзвонити нам</span>
-            </a>
-          </div>
-          <div class="hero__image">
-            <img src="/img/9G2A38162.png" alt="" />
-            <div class="hero__image_rect-1"></div>
-          </div>
-        </div>
-      </section>
-      <!-- / HERO -->
-
-      <!-- BENEFITS -->
-      <section class="benefits" id="benefits">
-        <div class="wrapper">
-          <ul>
-            <li>
-              <img src="/img/dental-drill.svg" alt="" />
-              <h2>Нове і сучасне<br />устаткування</h2>
-              <p>
-                Наша клініка оснащена новітнім і сучасним устаткуванням, що
-                дозволяє нам забезпечувати високий рівень точності, безпеки та
-                комфорту під час лікування.
-              </p>
-            </li>
-            <li>
-              <img src="/img/doctor.svg" alt="" />
-              <h2>Висококваліфіковані<br />фахівці</h2>
-              <p>
-                Наша команда складається з досвідчених і висококваліфікованих
-                фахівців, які використовують найсучасніші методи та технології
-                для забезпечення найкращих результатів лікування.
-              </p>
-            </li>
-            <li>
-              <img
-                src="/img/handshake-deal.svg"
-                class="benefits__handshake"
-                alt=""
-              />
-              <h2>Індивідуальний<br />підхід</h2>
-              <p>
-                Ми розробляємо індивідуальні плани лікування, враховуючи потреби
-                та бажання кожного пацієнта, щоб забезпечити найвищий рівень
-                комфорту та ефективності.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!--/  BENEFITS -->
-
-      <!-- QUALITY -->
-      <section class="quality">
-        <div class="wrapper">
-          <div class="quality__image">
-            <img src="/public/img/9G2A3865.jpg" alt="" />
-          </div>
-          <div class="quality__content">
-            <h2>
-              Ваша сяюча посмішка – <br />
-              <b>наша турбота</b>
-            </h2>
-            <div class="quality__content_description">
-              Ми надаємо якісну турботу про вашу усмішку, забезпечуючи
-              комплексні стоматологічні послуги. Від регулярних оглядів до
-              складних процедур – ми дбаємо про ваше здоров’я та красу зубів з
-              професіоналізмом та турботою.
-            </div>
-            <ul class="quality__content_list">
-              <li>
-                <div class="quality__content_icon">
-                  <img src="/public/img/label.png" alt="" />
-                </div>
-                <div class="quality__content_body">
-                  <h3>Економте, не жертвуючи якістю</h3>
-                  <p>
-                    Отримайте якісне лікування без переплат. Наші ціни — це
-                    гарантія кращого догляду за вашим усмішкою!
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div class="quality__content_icon">
-                  <img src="/public/img/box.png" alt="" />
-                </div>
-                <div class="quality__content_body">
-                  <h3>Комплексний догляд за вашими зубами</h3>
-                  <p>
-                    Все включено для вашого здоров’я: обстеження, чистка та
-                    лікування. Комплексний догляд для усмішки, яку ви
-                    заслуговуєте!
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!--/ QUALITY -->
-
-      <!-- SERVICES -->
-      <section class="services" id="services">
-        <div class="wrapper">
-          <h2 class="services__title">Наші <b>Послуги</b></h2>
-          <ul class="services__list">
-            <li class="services__list_therapy">
-              <img src="public/img/services/therapy.png" alt="" />
-              <h3>Терапія</h3>
-              <p>
-                Професійна гігієна, ремінералізація, лікування карієсу,
-                пломбування, реставрація, лікування каналів, відбілювання зубів
-                для вашого здоров’я.
-              </p>
-            </li>
-            <li class="services__list_orthopedics">
-              <img src="/public/img/services/orthopedics.png" alt="" />
-              <h3>Ортопедія</h3>
-              <p>
-                Знімні протези, незнімні коронки, мости, імпланти, вініри та
-                капи для відновлення та покращення вашої чарівної усмішки.
-              </p>
-            </li>
-            <li class="services__list_kids">
-              <img src="/public/img/services/kids.png" alt="" />
-              <h3>Дитяча терапія</h3>
-              <p>
-                Профілактичні огляди, чистка, герметизація фісур, уроки гігієни,
-                лікування карієсу, пломбування, реставрація та консультації для
-                здоров’я дитячих зубів.
-              </p>
-            </li>
-            <li class="services__list_surgery">
-              <img src="/public/img/services/surgery.png" alt="" />
-              <h3>Хірургія</h3>
-              <p>
-                Видалення зубів, видалення зубів мудрості, синусліфтінг,
-                імплантація, підготовка до протезування, хірургія пародонта,
-                лікування запалень та проблем із щелепами.
-              </p>
-            </li>
-            <li class="services__list_diagnostic">
-              <img src="/public/img/services/zoom.png" alt="" />
-              <h3>Діагностика</h3>
-              <p>
-                Оцінка стану зубів і ротової порожнини сучасним обладнанням для
-                раннього виявлення проблем та складання індивідуального плану
-                лікування.
-              </p>
-            </li>
-            <li class="services__list_look">
-              <img src="/public/img/services/shield.png" alt="" />
-              <h3>Естетична стоматологія</h3>
-              <p>
-                Мрія про голлівудську посмішку стала реальністю. Відбілювання,
-                вініри, коронки – ми створимо посмішку, яка вразить усіх.
-                Змініть життя з новою, сяючою усмішкою!
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!--/ SERVICES -->
-
-      <!-- SKILS -->
-      <section class="skils">
-        <div class="wrapper">
-          <div class="skils__content">
-            <h2>Ваша ідеальна усмішка <b>починається тут</b></h2>
-            <p>
-              Наші висококваліфіковані експерти-стоматологи готові забезпечити
-              найвищий рівень медичного обслуговування. Ми використовуємо
-              передові методи лікування та сучасні технології для вашого
-              здоров’я і комфорту. Від профілактичних оглядів до складних
-              стоматологічних процедур – ми завжди піклуємось про вашу усмішку.
-            </p>
-            <a href="#contacts" class="skils__button">Контакти</a>
-          </div>
-          <div class="skils__image">
-            <img src="/public/img/9G2A3600.jpg" alt="" />
-          </div>
-        </div>
-      </section>
-      <!--/ SKILS -->
-
-      <!-- PRICES -->
-      <section class="prices" id="prices">
-        <div class="wrapper">
-          <img
-            src="/public/img/bg-dots-violet.svg"
-            class="prices__bg_1"
-            alt=""
-          />
-          <img src="/public/img/bg-dots-rose.svg" class="prices__bg_2" alt="" />
-
-          <h2>Наші <b>ціни</b></h2>
-          <ul>
-            <li>Консультація лікаря <b>від 150 грн</b></li>
-            <li>Професійна гігієна порожнини рота <b>від 1 300 грн</b></li>
-            <li>Пломбування (фотополімер) <b>від 900 грн</b></li>
-            <li>Коронка (металокераміка) <b>від 3 200 грн</b></li>
-            <li>Коронка (цирконій) <b>від 8 700 грн</b></li>
-            <li>Видалення зуба <b>від 1 250 грн</b></li>
-            <li>Атипове видалення зуба <b>від 2 400 грн</b></li>
-            <li>Встановлення імплантів <b>від 10 000 грн</b></li>
-          </ul>
-        </div>
-      </section>
-      <!--/ PRICES -->
-
-      <!-- CONTACTS -->
-      <section class="contacts" id="contacts">
-        <div class="wrapper">
-          <div class="contacts__rect rect_1"></div>
-          <div class="contacts__rect rect_2"></div>
-          <div class="contacts__rect rect_3"></div>
-          <h2>Наші <b>контакти</b></h2>
-          <div class="contacts__grid">
-            <div class="contacts__map"></div>
-            <ul class="contacts__info">
-              <li class="location">
-                <a
-                  href="https://www.google.com/maps/place/%D0%92%D1%96%D0%B4%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82,+16%2F50,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4279897,30.4286381,19z/data=!3m1!4b1!4m6!3m5!1s0x40d4cc0197f93ec3:0x729478d6902c4438!8m2!3d50.4279888!4d30.4292818!16s%2Fg%2F1td0rdb_?entry=ttu"
-                  target="_blank"
-                  class="contacts__info_icon"
-                >
-                  <img src="/public/img/location-pin.svg" alt="" />
-                </a>
-                <div class="contacts__info_body">
-                  <h3>Розташування</h3>
-                  <p>02000, м. Київ, проспект Відрадний, 16/50</p>
-                </div>
-              </li>
-              <li class="phone">
-                <a href="tel:+38 093 800 7171" class="contacts__info_icon">
-                  <img src="/public/img/phone.svg" alt="" />
-                </a>
-                <div class="contacts__info_body">
-                  <h3>Номер телефону</h3>
-                  <p>+38 (093) 800-71-71</p>
-                </div>
-              </li>
-              <li class="email">
-                <a
-                  href="mailto:stomatologvidradnii@gmail.com"
-                  class="contacts__info_icon"
-                >
-                  <img src="/public/img/email.svg" alt="" />
-                </a>
-                <div class="contacts__info_body">
-                  <h3>Email</h3>
-                  <p>stomatologvidradnii@gmail.com</p>
-                </div>
-              </li>
-              <li class="schedule">
-                <div class="contacts__info_icon">
-                  <img src="/public/img/schedule.svg" alt="" />
-                </div>
-                <div class="contacts__info_body">
-                  <h3>Розклад роботи</h3>
-                  <p>пн-пт: 10:00 - 20:00</p>
-                  <p>сб-нд: Вихідний</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!--/ CONTACTS -->
+      <button class="header__burger" id="header__burger">
+        <span></span>
+      </button>
     </div>
-    <!-- FOOTER -->
-    <footer class="footer">
+  </header>
+  <div class="main">
+    <!-- HERO -->
+    <section class="hero" id="hero">
       <div class="wrapper">
-        <section class="footer__logo">
-          <img src="/public/img/footer-logo.png" alt="" />
-          <!-- <a href="">Записатися на прийом</a> -->
-          <a
-            href="https://www.google.com/maps/place/%D0%92%D1%96%D0%B4%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82,+16%2F50,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4279897,30.4286381,19z/data=!3m1!4b1!4m6!3m5!1s0x40d4cc0197f93ec3:0x729478d6902c4438!8m2!3d50.4279888!4d30.4292818!16s%2Fg%2F1td0rdb_?entry=ttu"
-            target="_blank"
-            >Знайти нас на мапі</a
-          >
-        </section>
-        <section class="footer__contacts">
-          <div>
-            <p>
-              02000, м. Київ, <br />
-              проспект Відрадний, 16/50
-            </p>
-            <a href="tel:+38 093 800 7171">+38 (093) 800-71-71</a>
-            <a href="mailto:stomatologvidradnii@gmail.com"
-              >stomatologvidradnii@gmail.com</a
-            >
-          </div>
-        </section>
-        <section class="footer__links">
-          <div>
-            <a href="">Про клініку</a>
-            <a href="">Наші послуги</a>
-            <a href="">Наші ціни</a>
-            <a href="">Контакти</a>
-          </div>
-        </section>
+        <div class="hero__content">
+          <h1>Ми подбаємо про здоровʼя ваших зубів</h1>
+          <p>
+            Сучасні методи лікування, комфорт та увага до кожного пацієнта.
+            Наша команда професіоналів завжди готова допомогти вам посміхатися
+            з упевненістю.
+          </p>
+          <a href="tel:+38 093 800 7171">
+            <img src="/public/img/phone_white.svg" alt="" />
+            <span>Подзвонити нам</span>
+          </a>
+        </div>
+        <div class="hero__image">
+          <img src="/img/9G2A38162.png" alt="" />
+          <div class="hero__image_rect-1"></div>
+        </div>
       </div>
-    </footer>
-    <!--/ FOOTER -->
-    <script type="module" src="/js/main.js"></script>
-  </body>
+    </section>
+    <!-- / HERO -->
+
+    <!-- BENEFITS -->
+    <section class="benefits" id="benefits">
+      <div class="wrapper">
+        <ul>
+          <li>
+            <img src="/img/dental-drill.svg" alt="" />
+            <h2>Нове і сучасне<br />устаткування</h2>
+            <p>
+              Наша клініка оснащена новітнім і сучасним устаткуванням, що
+              дозволяє нам забезпечувати високий рівень точності, безпеки та
+              комфорту під час лікування.
+            </p>
+          </li>
+          <li>
+            <img src="/img/doctor.svg" alt="" />
+            <h2>Висококваліфіковані<br />фахівці</h2>
+            <p>
+              Наша команда складається з досвідчених і висококваліфікованих
+              фахівців, які використовують найсучасніші методи та технології
+              для забезпечення найкращих результатів лікування.
+            </p>
+          </li>
+          <li>
+            <img src="/img/handshake-deal.svg" class="benefits__handshake" alt="" />
+            <h2>Індивідуальний<br />підхід</h2>
+            <p>
+              Ми розробляємо індивідуальні плани лікування, враховуючи потреби
+              та бажання кожного пацієнта, щоб забезпечити найвищий рівень
+              комфорту та ефективності.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--/  BENEFITS -->
+
+    <!-- QUALITY -->
+    <section class="quality">
+      <div class="wrapper">
+        <div class="quality__image">
+          <img src="/public/img/9G2A3865.jpg" alt="" />
+        </div>
+        <div class="quality__content">
+          <h2>
+            Ваша сяюча посмішка – <br />
+            <b>наша турбота</b>
+          </h2>
+          <div class="quality__content_description">
+            Ми надаємо якісну турботу про вашу усмішку, забезпечуючи
+            комплексні стоматологічні послуги. Від регулярних оглядів до
+            складних процедур – ми дбаємо про ваше здоров’я та красу зубів з
+            професіоналізмом та турботою.
+          </div>
+          <ul class="quality__content_list">
+            <li>
+              <div class="quality__content_icon">
+                <img src="/public/img/label.png" alt="" />
+              </div>
+              <div class="quality__content_body">
+                <h3>Економте, не жертвуючи якістю</h3>
+                <p>
+                  Отримайте якісне лікування без переплат. Наші ціни — це
+                  гарантія кращого догляду за вашим усмішкою!
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="quality__content_icon">
+                <img src="/public/img/box.png" alt="" />
+              </div>
+              <div class="quality__content_body">
+                <h3>Комплексний догляд за вашими зубами</h3>
+                <p>
+                  Все включено для вашого здоров’я: обстеження, чистка та
+                  лікування. Комплексний догляд для усмішки, яку ви
+                  заслуговуєте!
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--/ QUALITY -->
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="wrapper">
+        <h2 class="services__title">Наші <b>Послуги</b>
+        </h2>
+        <ul class="services__list">
+          <li class="services__list_therapy">
+            <img src="public/img/services/therapy.png" alt="" />
+            <h3>Терапія</h3>
+            <p>
+              Професійна гігієна, ремінералізація, лікування карієсу,
+              пломбування, реставрація, лікування каналів, відбілювання зубів
+              для вашого здоров’я.
+            </p>
+          </li>
+          <li class="services__list_orthopedics">
+            <img src="/public/img/services/orthopedics.png" alt="" />
+            <h3>Ортопедія</h3>
+            <p>
+              Знімні протези, незнімні коронки, мости, імпланти, вініри та
+              капи для відновлення та покращення вашої чарівної усмішки.
+            </p>
+          </li>
+          <li class="services__list_kids">
+            <img src="/public/img/services/kids.png" alt="" />
+            <h3>Дитяча терапія</h3>
+            <p>
+              Профілактичні огляди, чистка, герметизація фісур, уроки гігієни,
+              лікування карієсу, пломбування, реставрація та консультації для
+              здоров’я дитячих зубів.
+            </p>
+          </li>
+          <li class="services__list_surgery">
+            <img src="/public/img/services/surgery.png" alt="" />
+            <h3>Хірургія</h3>
+            <p>
+              Видалення зубів, видалення зубів мудрості, синусліфтінг,
+              імплантація, підготовка до протезування, хірургія пародонта,
+              лікування запалень та проблем із щелепами.
+            </p>
+          </li>
+          <li class="services__list_diagnostic">
+            <img src="/public/img/services/zoom.png" alt="" />
+            <h3>Діагностика</h3>
+            <p>
+              Оцінка стану зубів і ротової порожнини сучасним обладнанням для
+              раннього виявлення проблем та складання індивідуального плану
+              лікування.
+            </p>
+          </li>
+          <li class="services__list_look">
+            <img src="/public/img/services/shield.png" alt="" />
+            <h3>Естетична стоматологія</h3>
+            <p>
+              Мрія про голлівудську посмішку стала реальністю. Відбілювання,
+              вініри, коронки – ми створимо посмішку, яка вразить усіх.
+              Змініть життя з новою, сяючою усмішкою!
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--/ SERVICES -->
+
+    <!-- SKILS -->
+    <section class="skils">
+      <div class="wrapper">
+        <div class="skils__content">
+          <h2>Ваша ідеальна усмішка <b>починається тут</b>
+          </h2>
+          <p>
+            Наші висококваліфіковані експерти-стоматологи готові забезпечити
+            найвищий рівень медичного обслуговування. Ми використовуємо
+            передові методи лікування та сучасні технології для вашого
+            здоров’я і комфорту. Від профілактичних оглядів до складних
+            стоматологічних процедур – ми завжди піклуємось про вашу усмішку.
+          </p>
+          <a href="#contacts" class="skils__button">Контакти</a>
+        </div>
+        <div class="skils__image">
+          <img src="/public/img/9G2A3600.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!--/ SKILS -->
+
+    <!-- PRICES -->
+    <section class="prices" id="prices">
+      <div class="wrapper">
+        <img src="/public/img/bg-dots-violet.svg" class="prices__bg_1" alt="" />
+        <img src="/public/img/bg-dots-rose.svg" class="prices__bg_2" alt="" />
+
+        <h2>Наші <b>ціни</b>
+        </h2>
+        <ul>
+          <li>Консультація лікаря <b>від 300 грн</b>
+          </li>
+          <li>Професійна гігієна порожнини рота <b>від 1 700 грн</b>
+          </li>
+          <li>Пломбування (фотополімер) <b>від 2 000 грн</b>
+          </li>
+          <li>Коронка (металокераміка) <b>від 4 750 грн</b>
+          </li>
+          <li>Коронка (цирконій) <b>від 9 900 грн</b>
+          </li>
+          <li>Видалення зуба <b>від 1 500 грн</b>
+          </li>
+          <li>Атипове видалення зуба <b>від 4 500 грн</b>
+          </li>
+          <li>Встановлення імплантів <b>від 12 000 грн</b>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--/ PRICES -->
+
+    <!-- CONTACTS -->
+    <section class="contacts" id="contacts">
+      <div class="wrapper">
+        <div class="contacts__rect rect_1"></div>
+        <div class="contacts__rect rect_2"></div>
+        <div class="contacts__rect rect_3"></div>
+        <h2>Наші <b>контакти</b>
+        </h2>
+        <div class="contacts__grid">
+          <div class="contacts__map"></div>
+          <ul class="contacts__info">
+            <li class="location">
+              <a href="https://www.google.com/maps/place/%D0%92%D1%96%D0%B4%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82,+16%2F50,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4279897,30.4286381,19z/data=!3m1!4b1!4m6!3m5!1s0x40d4cc0197f93ec3:0x729478d6902c4438!8m2!3d50.4279888!4d30.4292818!16s%2Fg%2F1td0rdb_?entry=ttu"
+                target="_blank" class="contacts__info_icon">
+                <img src="/public/img/location-pin.svg" alt="" />
+              </a>
+              <div class="contacts__info_body">
+                <h3>Розташування</h3>
+                <p>02000, м. Київ, проспект Відрадний, 16/50</p>
+              </div>
+            </li>
+            <li class="phone">
+              <a href="tel:+38 093 800 7171" class="contacts__info_icon">
+                <img src="/public/img/phone.svg" alt="" />
+              </a>
+              <div class="contacts__info_body">
+                <h3>Номер телефону</h3>
+                <p>+38 (093) 800-71-71</p>
+              </div>
+            </li>
+            <li class="email">
+              <a href="mailto:stomatologvidradnii@gmail.com" class="contacts__info_icon">
+                <img src="/public/img/email.svg" alt="" />
+              </a>
+              <div class="contacts__info_body">
+                <h3>Email</h3>
+                <p>stomatologvidradnii@gmail.com</p>
+              </div>
+            </li>
+            <li class="schedule">
+              <div class="contacts__info_icon">
+                <img src="/public/img/schedule.svg" alt="" />
+              </div>
+              <div class="contacts__info_body">
+                <h3>Розклад роботи</h3>
+                <p>пн-пт: 10:00 - 20:00</p>
+                <p>сб-нд: Вихідний</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--/ CONTACTS -->
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrapper">
+      <section class="footer__logo">
+        <img src="/public/img/footer-logo.png" alt="" />
+        <!-- <a href="">Записатися на прийом</a> -->
+        <a href="https://www.google.com/maps/place/%D0%92%D1%96%D0%B4%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82,+16%2F50,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4279897,30.4286381,19z/data=!3m1!4b1!4m6!3m5!1s0x40d4cc0197f93ec3:0x729478d6902c4438!8m2!3d50.4279888!4d30.4292818!16s%2Fg%2F1td0rdb_?entry=ttu"
+          target="_blank">Знайти нас на мапі</a>
+      </section>
+      <section class="footer__contacts">
+        <div>
+          <p>
+            02000, м. Київ, <br />
+            проспект Відрадний, 16/50
+          </p>
+          <a href="tel:+38 093 800 7171">+38 (093) 800-71-71</a>
+          <a href="mailto:stomatologvidradnii@gmail.com">stomatologvidradnii@gmail.com</a>
+        </div>
+      </section>
+      <section class="footer__links">
+        <div>
+          <a href="#benefits">Про клініку</a>
+          <a href="#services">Наші послуги</a>
+          <a href="#prices">Наші ціни</a>
+          <a href="#contacts">Контакти</a>
+        </div>
+      </section>
+    </div>
+  </footer>
+  <!--/ FOOTER -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+
 </html>
