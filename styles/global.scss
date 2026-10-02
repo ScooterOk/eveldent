@@ -1,5 +1,42 @@
 @import "reset-css";
 
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--color-berry);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: 500;
+  transition: top 0.2s ease;
+  &:focus-visible {
+    top: 16px;
+    outline: 3px solid var(--color-sky);
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-violet);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -82,11 +119,11 @@ body {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #4f46e5;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #4338ca;
 }
 
 .wrapper {
@@ -120,6 +157,10 @@ header {
     img {
       width: 200px;
     }
+  }
+  .header__nav {
+    display: flex;
+    align-items: center;
   }
   .header__menu {
     display: flex;
@@ -169,8 +210,8 @@ header {
     }
   }
   .header__burger {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     display: none;
     justify-content: center;
     align-items: center;
@@ -178,7 +219,8 @@ header {
     border-radius: 50%;
     outline: none;
     background-color: transparent;
-    padding: 8px;
+    padding: 12px;
+    cursor: pointer;
     position: relative;
     z-index: 1;
     span {
@@ -489,23 +531,23 @@ header {
           }
           &.services__list_orthopedics {
             background-color: #f2fbf2;
-            color: var(--color-green);
+            color: #13733f;
           }
           &.services__list_kids {
             background-color: #fbf2f6;
-            color: #ff39a3;
+            color: #be185d;
           }
           &.services__list_surgery {
             background-color: #fbf2f2;
-            color: #da4d4d;
+            color: #b91c1c;
           }
           &.services__list_diagnostic {
             background-color: #f2f3fb;
-            color: #4d74da;
+            color: #1d4ed8;
           }
           &.services__list_look {
             background-color: #fbf9f2;
-            color: #cac310;
+            color: #854d0e;
           }
         }
       }
@@ -690,8 +732,8 @@ header {
         background-color: #d7c9ff;
         border-radius: 16px;
         cursor: pointer;
-        color: var(--color-violet);
-        font-weight: 400;
+        color: #43228a;
+        font-weight: 500;
         font-size: 18px;
         box-shadow: 0px 2px 2px 0px #c0b4e2;
         border: 2px solid #d7c9ff;
@@ -700,6 +742,7 @@ header {
         &:hover {
           background-color: transparent;
           box-shadow: 0px 0px 0px 0px transparent;
+          color: #43228a;
         }
       }
     }
@@ -809,12 +852,12 @@ header {
         b {
           flex-grow: 1;
           display: flex;
-          color: #ff39a3;
+          color: #be185d;
           font-weight: 500;
           &::before {
             content: "";
             flex-grow: 1;
-            border-bottom: 1px dashed #ff39a3;
+            border-bottom: 1px dashed #be185d;
             margin: 0 16px;
           }
         }
@@ -933,10 +976,10 @@ header {
               background-color: #fbf2f6;
             }
             .contacts__info_body {
-              color: #ff39a3;
+              color: #be185d;
               a {
                 color: currentColor;
-                font-weight: 400;
+                font-weight: 500;
               }
             }
           }
@@ -945,10 +988,10 @@ header {
               background-color: #f2fbf2;
             }
             .contacts__info_body {
-              color: var(--color-green);
+              color: #13733f;
               a {
                 color: currentColor;
-                font-weight: 400;
+                font-weight: 500;
               }
             }
           }
@@ -957,10 +1000,10 @@ header {
               background-color: #fbf9f2;
             }
             .contacts__info_body {
-              color: #cac310;
+              color: #854d0e;
               a {
                 color: currentColor;
-                font-weight: 400;
+                font-weight: 500;
               }
             }
           }

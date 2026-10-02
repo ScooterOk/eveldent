@@ -34,11 +34,20 @@ window.addEventListener("scroll", () => {
 });
 
 headerBurger.addEventListener("click", () => {
-  body.classList.toggle("burger");
+  const isOpen = body.classList.toggle("burger");
+  headerBurger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  headerBurger.setAttribute(
+    "aria-label",
+    isOpen ? "Закрити меню навігації" : "Відкрити меню навігації"
+  );
 });
 
 header__menu
   .querySelectorAll("li a, li button")
   .forEach((el) =>
-    el.addEventListener("click", () => body.classList.remove("burger"))
+    el.addEventListener("click", () => {
+      body.classList.remove("burger");
+      headerBurger.setAttribute("aria-expanded", "false");
+      headerBurger.setAttribute("aria-label", "Відкрити меню навігації");
+    })
   );
