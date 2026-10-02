@@ -1,5 +1,16 @@
 @import "reset-css";
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400&display=swap");
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 :root {
   // add custom variables here
@@ -275,7 +286,8 @@ header {
         text-align: center;
         position: relative;
         line-height: 0;
-        & > img {
+        & > img,
+        & > picture > img {
           height: 720px;
           position: relative;
           z-index: 1;
@@ -331,7 +343,8 @@ header {
           }
         }
         .hero__image {
-          & > img {
+          & > img,
+          & > picture > img {
             width: 100%;
             height: auto;
           }
@@ -383,7 +396,8 @@ header {
         gap: 16px;
         color: #fff;
         text-align: center;
-        h2 {
+        h2,
+        h3 {
           font-size: 22px;
           font-weight: 500;
           letter-spacing: 1px;

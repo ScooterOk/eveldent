@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -15,13 +18,14 @@
   <meta name="keywords"
     content="Eveldent, стоматологічна клініка, лікування зубів, імплантація, ортодонтія, естетична стоматологія, здорова усмішка, професійні послуги стоматолога, відрадний, проспект відрадний, київ" />
   <meta name="author" content="Eveldent" />
-  <meta charset="UTF-8" />
   <meta property="og:title" content="Eveldent - Ваша сяюча посмішка, наша турбота" />
   <meta property="og:description"
     content="Стоматологічна клініка Eveldent пропонує професійні послуги для вашої сяючої посмішки. Ми забезпечуємо якісне лікування зубів, імплантацію, ортодонтію та естетичну стоматологію." />
   <meta property="og:image" content="/opengraph.jpg" />
-  <meta property="og:url" content="http://vidradny-clinic.kyiv.ua/" />
+  <meta property="og:url" content="https://www.vidradny-clinic.kyiv.ua/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:site_name" content="Eveldent" />
 
   <link rel="canonical" href="https://www.vidradny-clinic.kyiv.ua/" />
 
@@ -49,16 +53,47 @@
         "telephone": "+38 (093) 800-71-71",
         "email": "stomatologvidradnii@gmail.com",
         "openingHours": "Mo-Fr 10:00-20:00",
-        "priceRange": "150-20000 UAH",
+        "priceRange": "400-20000 UAH",
         "availableService": [
           {
             "@type": "MedicalProcedure",
             "name": "Консультація лікаря",
-            "price": " від 150 Грн"
-          }, {
+            "price": "400 UAH"
+          },
+          {
             "@type": "MedicalProcedure",
             "name": "Професійна гігієна порожнини рота",
-            "price": "від 1 500 грн"
+            "price": "2500 UAH"
+          },
+          {
+            "@type": "MedicalProcedure",
+            "name": "Пломбування (фотополімер)",
+            "price": "від 2500 UAH"
+          },
+          {
+            "@type": "MedicalProcedure",
+            "name": "Коронка (металокераміка)",
+            "price": "від 4750 UAH"
+          },
+          {
+            "@type": "MedicalProcedure",
+            "name": "Коронка (цирконій)",
+            "price": "від 10900 UAH"
+          },
+          {
+            "@type": "MedicalProcedure",
+            "name": "Видалення зуба",
+            "price": "від 2500 UAH"
+          },
+          {
+            "@type": "MedicalProcedure",
+            "name": "Атипове видалення зуба",
+            "price": "від 6500 UAH"
+          },
+          {
+            "@type": "MedicalProcedure",
+            "name": "Встановлення імплантів",
+            "price": "від 12000 UAH"
           }
         ],
         "aggregateRating": {
@@ -141,7 +176,7 @@
   <header class="header">
     <div class="wrapper">
       <a href="#hero" class="header__logo">
-        <img src="/img/header-logo.png" alt="" />
+        <img src="/img/header-logo.png" alt="Стоматологічна клініка Eveldent" />
       </a>
       <ul class="header__menu" id="header__menu">
         <li>
@@ -184,12 +219,16 @@
             з упевненістю.
           </p>
           <a href="tel:+38 093 800 7171">
-            <img src="/public/img/phone_white.svg" alt="" />
+            <img src="/public/img/phone_white.svg" alt="Подзвонити в клініку Eveldent" />
             <span>Подзвонити нам</span>
           </a>
         </div>
         <div class="hero__image">
-          <img src="/img/9G2A38162.png" alt="" />
+          <picture>
+            <source srcset="/img/9G2A38162.avif" type="image/avif" />
+            <source srcset="/img/9G2A38162.webp" type="image/webp" />
+            <img src="/img/9G2A38162.png" alt="Лікар стоматологічної клініки Eveldent" fetchpriority="high" />
+          </picture>
           <div class="hero__image_rect-1"></div>
         </div>
       </div>
@@ -199,10 +238,11 @@
     <!-- BENEFITS -->
     <section class="benefits" id="benefits">
       <div class="wrapper">
+        <h2 class="visually-hidden">Про клініку Eveldent</h2>
         <ul>
           <li>
-            <img src="/img/dental-drill.svg" alt="" />
-            <h2>Нове і сучасне<br />устаткування</h2>
+            <img src="/img/dental-drill.svg" alt="Сучасне стоматологічне устаткування" loading="lazy" />
+            <h3>Нове і сучасне<br />устаткування</h3>
             <p>
               Наша клініка оснащена новітнім і сучасним устаткуванням, що
               дозволяє нам забезпечувати високий рівень точності, безпеки та
@@ -210,8 +250,8 @@
             </p>
           </li>
           <li>
-            <img src="/img/doctor.svg" alt="" />
-            <h2>Висококваліфіковані<br />фахівці</h2>
+            <img src="/img/doctor.svg" alt="Висококваліфіковані лікарі-стоматологи" loading="lazy" />
+            <h3>Висококваліфіковані<br />фахівці</h3>
             <p>
               Наша команда складається з досвідчених і висококваліфікованих
               фахівців, які використовують найсучасніші методи та технології
@@ -219,8 +259,8 @@
             </p>
           </li>
           <li>
-            <img src="/img/handshake-deal.svg" class="benefits__handshake" alt="" />
-            <h2>Індивідуальний<br />підхід</h2>
+            <img src="/img/handshake-deal.svg" class="benefits__handshake" alt="Індивідуальний підхід до лікування зубів" loading="lazy" />
+            <h3>Індивідуальний<br />підхід</h3>
             <p>
               Ми розробляємо індивідуальні плани лікування, враховуючи потреби
               та бажання кожного пацієнта, щоб забезпечити найвищий рівень
@@ -236,7 +276,7 @@
     <section class="quality">
       <div class="wrapper">
         <div class="quality__image">
-          <img src="/public/img/9G2A3865.jpg" alt="" />
+          <img src="/public/img/9G2A3865.jpg" alt="Стоматологічний кабінет клініки Eveldent" loading="lazy" />
         </div>
         <div class="quality__content">
           <h2>
@@ -252,7 +292,7 @@
           <ul class="quality__content_list">
             <li>
               <div class="quality__content_icon">
-                <img src="/public/img/label.png" alt="" />
+                <img src="/public/img/label.png" alt="Доступні ціни без переплат" loading="lazy" />
               </div>
               <div class="quality__content_body">
                 <h3>Економте, не жертвуючи якістю</h3>
@@ -264,7 +304,7 @@
             </li>
             <li>
               <div class="quality__content_icon">
-                <img src="/public/img/box.png" alt="" />
+                <img src="/public/img/box.png" alt="Комплексний догляд за зубами" loading="lazy" />
               </div>
               <div class="quality__content_body">
                 <h3>Комплексний догляд за вашими зубами</h3>
@@ -288,7 +328,7 @@
         </h2>
         <ul class="services__list">
           <li class="services__list_therapy">
-            <img src="public/img/services/therapy.png" alt="" />
+            <img src="/public/img/services/therapy.png" alt="Терапевтична стоматологія" loading="lazy" />
             <h3>Терапія</h3>
             <p>
               Професійна гігієна, ремінералізація, лікування карієсу,
@@ -297,7 +337,7 @@
             </p>
           </li>
           <li class="services__list_orthopedics">
-            <img src="/public/img/services/orthopedics.png" alt="" />
+            <img src="/public/img/services/orthopedics.png" alt="Ортопедична стоматологія та протезування" loading="lazy" />
             <h3>Ортопедія</h3>
             <p>
               Знімні протези, незнімні коронки, мости, імпланти, вініри та
@@ -305,7 +345,7 @@
             </p>
           </li>
           <li class="services__list_kids">
-            <img src="/public/img/services/kids.png" alt="" />
+            <img src="/public/img/services/kids.png" alt="Дитяча стоматологія" loading="lazy" />
             <h3>Дитяча терапія</h3>
             <p>
               Профілактичні огляди, чистка, герметизація фісур, уроки гігієни,
@@ -314,7 +354,7 @@
             </p>
           </li>
           <li class="services__list_surgery">
-            <img src="/public/img/services/surgery.png" alt="" />
+            <img src="/public/img/services/surgery.png" alt="Хірургічна стоматологія та імплантація" loading="lazy" />
             <h3>Хірургія</h3>
             <p>
               Видалення зубів, видалення зубів мудрості, синусліфтінг,
@@ -323,7 +363,7 @@
             </p>
           </li>
           <li class="services__list_diagnostic">
-            <img src="/public/img/services/zoom.png" alt="" />
+            <img src="/public/img/services/zoom.png" alt="Діагностика зубів та ротової порожнини" loading="lazy" />
             <h3>Діагностика</h3>
             <p>
               Оцінка стану зубів і ротової порожнини сучасним обладнанням для
@@ -332,7 +372,7 @@
             </p>
           </li>
           <li class="services__list_look">
-            <img src="/public/img/services/shield.png" alt="" />
+            <img src="/public/img/services/shield.png" alt="Естетична стоматологія" loading="lazy" />
             <h3>Естетична стоматологія</h3>
             <p>
               Мрія про голлівудську посмішку стала реальністю. Відбілювання,
@@ -361,7 +401,7 @@
           <a href="#contacts" class="skils__button">Контакти</a>
         </div>
         <div class="skils__image">
-          <img src="/public/img/9G2A3600.jpg" alt="" />
+          <img src="/public/img/9G2A3600.jpg" alt="Стоматологічна клініка Eveldent Київ" loading="lazy" />
         </div>
       </div>
     </section>
@@ -370,25 +410,25 @@
     <!-- PRICES -->
     <section class="prices" id="prices">
       <div class="wrapper">
-        <img src="/public/img/bg-dots-violet.svg" class="prices__bg_1" alt="" />
-        <img src="/public/img/bg-dots-rose.svg" class="prices__bg_2" alt="" />
+        <img src="/public/img/bg-dots-violet.svg" class="prices__bg_1" alt="" aria-hidden="true" />
+        <img src="/public/img/bg-dots-rose.svg" class="prices__bg_2" alt="" aria-hidden="true" />
 
         <h2>Наші <b>ціни</b>
         </h2>
         <ul>
-          <li>Консультація лікаря <b>від 300 грн</b>
+          <li>Консультація лікаря <b>400 грн</b>
           </li>
-          <li>Професійна гігієна порожнини рота <b>від 1 700 грн</b>
+          <li>Професійна гігієна порожнини рота <b>2 500 грн</b>
           </li>
-          <li>Пломбування (фотополімер) <b>від 2 000 грн</b>
+          <li>Пломбування (фотополімер) <b>від 2 500 грн</b>
           </li>
           <li>Коронка (металокераміка) <b>від 4 750 грн</b>
           </li>
-          <li>Коронка (цирконій) <b>від 9 900 грн</b>
+          <li>Коронка (цирконій) <b>від 10 900 грн</b>
           </li>
-          <li>Видалення зуба <b>від 1 500 грн</b>
+          <li>Видалення зуба <b>від 2 500 грн</b>
           </li>
-          <li>Атипове видалення зуба <b>від 4 500 грн</b>
+          <li>Атипове видалення зуба <b>від 6 500 грн</b>
           </li>
           <li>Встановлення імплантів <b>від 12 000 грн</b>
           </li>
@@ -411,7 +451,7 @@
             <li class="location">
               <a href="https://www.google.com/maps/place/%D0%92%D1%96%D0%B4%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82,+16%2F50,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4279897,30.4286381,19z/data=!3m1!4b1!4m6!3m5!1s0x40d4cc0197f93ec3:0x729478d6902c4438!8m2!3d50.4279888!4d30.4292818!16s%2Fg%2F1td0rdb_?entry=ttu"
                 target="_blank" class="contacts__info_icon">
-                <img src="/public/img/location-pin.svg" alt="" />
+                <img src="/public/img/location-pin.svg" alt="Локація клініки Eveldent" />
               </a>
               <div class="contacts__info_body">
                 <h3>Розташування</h3>
@@ -420,7 +460,7 @@
             </li>
             <li class="phone">
               <a href="tel:+38 093 800 7171" class="contacts__info_icon">
-                <img src="/public/img/phone.svg" alt="" />
+                <img src="/public/img/phone.svg" alt="Телефон клініки Eveldent" />
               </a>
               <div class="contacts__info_body">
                 <h3>Номер телефону</h3>
@@ -429,7 +469,7 @@
             </li>
             <li class="email">
               <a href="mailto:stomatologvidradnii@gmail.com" class="contacts__info_icon">
-                <img src="/public/img/email.svg" alt="" />
+                <img src="/public/img/email.svg" alt="Email клініки Eveldent" />
               </a>
               <div class="contacts__info_body">
                 <h3>Email</h3>
@@ -438,7 +478,7 @@
             </li>
             <li class="schedule">
               <div class="contacts__info_icon">
-                <img src="/public/img/schedule.svg" alt="" />
+                <img src="/public/img/schedule.svg" alt="Графік прийому клініки Eveldent" />
               </div>
               <div class="contacts__info_body">
                 <h3>Розклад роботи</h3>
@@ -456,7 +496,7 @@
   <footer class="footer">
     <div class="wrapper">
       <section class="footer__logo">
-        <img src="/public/img/footer-logo.png" alt="" />
+        <img src="/public/img/footer-logo.png" alt="Стоматологічна клініка Eveldent" loading="lazy" />
         <!-- <a href="">Записатися на прийом</a> -->
         <a href="https://www.google.com/maps/place/%D0%92%D1%96%D0%B4%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82,+16%2F50,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4279897,30.4286381,19z/data=!3m1!4b1!4m6!3m5!1s0x40d4cc0197f93ec3:0x729478d6902c4438!8m2!3d50.4279888!4d30.4292818!16s%2Fg%2F1td0rdb_?entry=ttu"
           target="_blank">Знайти нас на мапі</a>
