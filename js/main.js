@@ -51,3 +51,61 @@ header__menu
       headerBurger.setAttribute("aria-label", "Відкрити меню навігації");
     })
   );
+
+// --- REVIEWS CAROUSEL (Embla) ---
+import EmblaCarousel from "embla-carousel";
+
+const emblaNode = document.querySelector(".reviews__embla .embla__viewport");
+if (emblaNode) {
+  const prevBtn = document.querySelector(".reviews__arrow--prev");
+  const nextBtn = document.querySelector(".reviews__arrow--next");
+  const dotsNode = document.querySelector(".reviews__dots");
+
+  const emblaApi = EmblaCarousel(emblaNode, {
+    loop: false,
+    align: "start",
+    slidesToScroll: 1,
+    containScroll: "trimSnaps",
+  });
+
+  const updateDotsAndArrows = () => {
+    if (prevBtn) prevBtn.disabled = !emblaApi.canScrollPrev();
+    if (nextBtn) nextBtn.disabled = !emblaApi.canScrollNext();
+
+    if (dotsNode) {
+      const selected = emblaApi.selectedScrollSnap();
+      const dotNodes = dotsNode.querySelectorAll(".reviews__dot");
+      dotNodes.forEach((dot, idx) => {
+        const isActive = idx === selected;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-current", isActive ? "true" : "false");
+      });
+    }
+  };
+
+  const setupDots = () => {
+    if (!dotsNode) return;
+    dotsNode.innerHTML = "";
+    const slideSnapList = emblaApi.scrollSnapList();
+    slideSnapList.forEach((_, idx) => {
+      const dot = document.createElement("button");
+      dot.classList.add("reviews__dot");
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Перейти до відгуку ${idx + 1}`);
+      dot.addEventListener("click", () => emblaApi.scrollTo(idx));
+      dotsNode.appendChild(dot);
+    });
+  };
+
+  setupDots();
+  updateDotsAndArrows();
+
+  if (prevBtn) prevBtn.addEventListener("click", () => emblaApi.scrollPrev());
+  if (nextBtn) nextBtn.addEventListener("click", () => emblaApi.scrollNext());
+
+  emblaApi.on("select", updateDotsAndArrows);
+  emblaApi.on("reInit", () => {
+    setupDots();
+    updateDotsAndArrows();
+  });
+}
