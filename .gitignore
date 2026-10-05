@@ -26,3 +26,8 @@ dist-ssr
 # Agent
 .agent/
 agent/
+
+# Environment variables
+.env
+.env.*
+!.env.example
