@@ -109,3 +109,28 @@ if (emblaNode) {
     updateDotsAndArrows();
   });
 }
+
+// --- FAQ ACCORDION ---
+const faqItems = document.querySelectorAll(".faq__item");
+
+faqItems.forEach((item) => {
+  const summary = item.querySelector(".faq__question");
+  if (!summary) return;
+
+  // Keep details element open so CSS grid controls the animation smoothly without display:none
+  item.open = true;
+
+  summary.addEventListener("click", (e) => {
+    e.preventDefault();
+    const isOpen = item.classList.contains("is-open");
+
+    // Close any other open accordion item
+    faqItems.forEach((other) => other.classList.remove("is-open"));
+
+    // Toggle current item
+    if (!isOpen) {
+      item.classList.add("is-open");
+    }
+  });
+});
+
