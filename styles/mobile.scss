@@ -30,6 +30,7 @@
         align-items: center;
         gap: 32px;
         height: 0;
+        visibility: hidden;
         transition: all 0.2s ease;
         overflow: hidden;
         .header_contact {
@@ -54,6 +55,7 @@
     header.header {
       .header__menu {
         height: 100dvh;
+        visibility: visible;
         overflow: auto;
       }
       .wrapper {

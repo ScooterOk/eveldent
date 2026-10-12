@@ -178,7 +178,6 @@ header {
   .header_contact {
     .button {
       border: none;
-      outline: none;
       background: rgb(122, 87, 221);
       background: #66217e;
       min-width: 180px;
@@ -201,6 +200,13 @@ header {
         width: 28px;
         height: 28px;
       }
+      &:focus {
+        outline: none;
+      }
+      &:focus-visible {
+        outline: 3px solid #66217e;
+        outline-offset: 3px;
+      }
       &:hover {
         border-color: #66217e;
         color: #66217e;
@@ -217,12 +223,18 @@ header {
     align-items: center;
     border: 1px solid #66217e;
     border-radius: 50%;
-    outline: none;
     background-color: transparent;
     padding: 12px;
     cursor: pointer;
     position: relative;
     z-index: 1;
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 3px solid #66217e;
+      outline-offset: 3px;
+    }
     span {
       width: 100%;
       height: 2px;
@@ -292,12 +304,11 @@ header {
         button,
         a {
           border: none;
-          outline: none;
-          background: rgb(122, 87, 221);
+          background: #724dda;
           background: linear-gradient(
             90deg,
-            rgba(122, 87, 221, 1) 0%,
-            rgba(201, 184, 253, 1) 100%
+            #724dda 0%,
+            #521966 100%
           );
           display: inline-flex;
           justify-content: center;
@@ -317,6 +328,13 @@ header {
           img {
             width: 28px;
             height: 28px;
+          }
+          &:focus {
+            outline: none;
+          }
+          &:focus-visible {
+            outline: 3px solid #66217e;
+            outline-offset: 3px;
           }
           &:hover {
             box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
@@ -1192,26 +1210,42 @@ header {
       .reviews__dots {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 2px;
 
         .reviews__dot {
-          width: 10px;
-          height: 10px;
-          border-radius: 5px;
+          width: 28px;
+          height: 28px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background: transparent;
           border: none;
-          background: #d7c9ff;
           cursor: pointer;
-          transition: all 0.25s ease;
           padding: 0;
+          transition: width 0.25s ease;
+
+          &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background: #9d85ea;
+            transition: all 0.25s ease;
+          }
 
           &.is-active {
-            width: 28px;
-            background: #724dda;
+            width: 40px;
+
+            &::before {
+              width: 28px;
+              background: #724dda;
+            }
           }
 
           &:focus-visible {
             outline: 2px solid #724dda;
             outline-offset: 2px;
+            border-radius: 6px;
           }
         }
       }
@@ -1382,6 +1416,7 @@ header {
 
         .faq__answer {
           grid-template-rows: 1fr;
+          visibility: visible;
 
           .faq__answer_content {
             opacity: 1;
@@ -1436,7 +1471,10 @@ header {
     .faq__answer {
       display: grid;
       grid-template-rows: 0fr;
-      transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      visibility: hidden;
+      transition:
+        grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.35s ease;
       font-size: 16px;
       line-height: 1.65;
       font-weight: 300;
@@ -1485,6 +1523,7 @@ header {
         }
         .faq__answer {
           grid-template-rows: 1fr;
+          visibility: visible;
           .faq__answer_content {
             opacity: 1;
             transform: none;

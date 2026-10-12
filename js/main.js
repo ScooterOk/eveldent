@@ -52,6 +52,16 @@ header__menu
     })
   );
 
+// Close burger menu on Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && body.classList.contains("burger")) {
+    body.classList.remove("burger");
+    headerBurger.setAttribute("aria-expanded", "false");
+    headerBurger.setAttribute("aria-label", "Відкрити меню навігації");
+    headerBurger.focus();
+  }
+});
+
 // --- REVIEWS CAROUSEL (Embla) ---
 import EmblaCarousel from "embla-carousel";
 
@@ -113,23 +123,47 @@ if (emblaNode) {
 // --- FAQ ACCORDION ---
 const faqItems = document.querySelectorAll(".faq__item");
 
+const closeFaqItem = (item) => {
+  if (!item.open) return;
+  item.classList.remove("is-open");
+  const onEnd = (e) => {
+    if (e.target !== item.querySelector(".faq__answer")) return;
+    item.open = false;
+    item.removeEventListener("transitionend", onEnd);
+  };
+  item.addEventListener("transitionend", onEnd);
+  setTimeout(() => {
+    if (!item.classList.contains("is-open")) {
+      item.open = false;
+    }
+  }, 400);
+};
+
+const openFaqItem = (item) => {
+  item.open = true;
+  requestAnimationFrame(() => {
+    item.classList.add("is-open");
+  });
+};
+
 faqItems.forEach((item) => {
   const summary = item.querySelector(".faq__question");
   if (!summary) return;
 
-  // Keep details element open so CSS grid controls the animation smoothly without display:none
-  item.open = true;
-
   summary.addEventListener("click", (e) => {
     e.preventDefault();
-    const isOpen = item.classList.contains("is-open");
+    const isCurrentlyOpen = item.classList.contains("is-open");
 
     // Close any other open accordion item
-    faqItems.forEach((other) => other.classList.remove("is-open"));
+    faqItems.forEach((other) => {
+      if (other !== item) closeFaqItem(other);
+    });
 
     // Toggle current item
-    if (!isOpen) {
-      item.classList.add("is-open");
+    if (isCurrentlyOpen) {
+      closeFaqItem(item);
+    } else {
+      openFaqItem(item);
     }
   });
 });
