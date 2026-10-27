@@ -34,11 +34,137 @@ window.addEventListener("scroll", () => {
 });
 
 headerBurger.addEventListener("click", () => {
-  body.classList.toggle("burger");
+  const isOpen = body.classList.toggle("burger");
+  headerBurger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  headerBurger.setAttribute(
+    "aria-label",
+    isOpen ? "Закрити меню навігації" : "Відкрити меню навігації"
+  );
 });
 
 header__menu
   .querySelectorAll("li a, li button")
   .forEach((el) =>
-    el.addEventListener("click", () => body.classList.remove("burger"))
+    el.addEventListener("click", () => {
+      body.classList.remove("burger");
+      headerBurger.setAttribute("aria-expanded", "false");
+      headerBurger.setAttribute("aria-label", "Відкрити меню навігації");
+    })
   );
+
+// Close burger menu on Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && body.classList.contains("burger")) {
+    body.classList.remove("burger");
+    headerBurger.setAttribute("aria-expanded", "false");
+    headerBurger.setAttribute("aria-label", "Відкрити меню навігації");
+    headerBurger.focus();
+  }
+});
+
+// --- REVIEWS CAROUSEL (Embla) ---
+import EmblaCarousel from "embla-carousel";
+
+const emblaNode = document.querySelector(".reviews__embla .embla__viewport");
+if (emblaNode) {
+  const prevBtn = document.querySelector(".reviews__arrow--prev");
+  const nextBtn = document.querySelector(".reviews__arrow--next");
+  const dotsNode = document.querySelector(".reviews__dots");
+
+  const emblaApi = EmblaCarousel(emblaNode, {
+    loop: false,
+    align: "start",
+    slidesToScroll: 1,
+    containScroll: "trimSnaps",
+  });
+
+  const updateDotsAndArrows = () => {
+    if (prevBtn) prevBtn.disabled = !emblaApi.canScrollPrev();
+    if (nextBtn) nextBtn.disabled = !emblaApi.canScrollNext();
+
+    if (dotsNode) {
+      const selected = emblaApi.selectedScrollSnap();
+      const dotNodes = dotsNode.querySelectorAll(".reviews__dot");
+      dotNodes.forEach((dot, idx) => {
+        const isActive = idx === selected;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-current", isActive ? "true" : "false");
+      });
+    }
+  };
+
+  const setupDots = () => {
+    if (!dotsNode) return;
+    dotsNode.innerHTML = "";
+    const slideSnapList = emblaApi.scrollSnapList();
+    slideSnapList.forEach((_, idx) => {
+      const dot = document.createElement("button");
+      dot.classList.add("reviews__dot");
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Перейти до відгуку ${idx + 1}`);
+      dot.addEventListener("click", () => emblaApi.scrollTo(idx));
+      dotsNode.appendChild(dot);
+    });
+  };
+
+  setupDots();
+  updateDotsAndArrows();
+
+  if (prevBtn) prevBtn.addEventListener("click", () => emblaApi.scrollPrev());
+  if (nextBtn) nextBtn.addEventListener("click", () => emblaApi.scrollNext());
+
+  emblaApi.on("select", updateDotsAndArrows);
+  emblaApi.on("reInit", () => {
+    setupDots();
+    updateDotsAndArrows();
+  });
+}
+
+// --- FAQ ACCORDION ---
+const faqItems = document.querySelectorAll(".faq__item");
+
+const closeFaqItem = (item) => {
+  if (!item.open) return;
+  item.classList.remove("is-open");
+  const onEnd = (e) => {
+    if (e.target !== item.querySelector(".faq__answer")) return;
+    item.open = false;
+    item.removeEventListener("transitionend", onEnd);
+  };
+  item.addEventListener("transitionend", onEnd);
+  setTimeout(() => {
+    if (!item.classList.contains("is-open")) {
+      item.open = false;
+    }
+  }, 400);
+};
+
+const openFaqItem = (item) => {
+  item.open = true;
+  requestAnimationFrame(() => {
+    item.classList.add("is-open");
+  });
+};
+
+faqItems.forEach((item) => {
+  const summary = item.querySelector(".faq__question");
+  if (!summary) return;
+
+  summary.addEventListener("click", (e) => {
+    e.preventDefault();
+    const isCurrentlyOpen = item.classList.contains("is-open");
+
+    // Close any other open accordion item
+    faqItems.forEach((other) => {
+      if (other !== item) closeFaqItem(other);
+    });
+
+    // Toggle current item
+    if (isCurrentlyOpen) {
+      closeFaqItem(item);
+    } else {
+      openFaqItem(item);
+    }
+  });
+});
+
