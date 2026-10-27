@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000mm" height="600mm" viewBox="0 0 1000 600">
+  <defs>
+    <style>
+      .bold-condensed {
+        font-family: "Arial Black", "Arial", "Helvetica Neue", sans-serif;
+        font-weight: 900;
+        fill: #111111;
+      }
+      .addr-title {
+        font-family: "Arial", "Helvetica Neue", sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        fill: #222222;
+      }
+      .addr-text {
+        font-family: "Arial Black", "Arial", sans-serif;
+        font-weight: 900;
+        font-size: 38px;
+        fill: #000000;
+      }
+      .addr-sub {
+        font-family: "Arial", "Helvetica Neue", sans-serif;
+        font-weight: 700;
+        font-size: 27px;
+        fill: #C62828;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#FFFFFF" />
+
+  <!-- Outer Rounded Frame -->
+  <rect x="25" y="25" width="950" height="550" rx="28" ry="28" fill="none" stroke="#111111" stroke-width="8" />
+
+  <!-- ================= TOP SECTION ================= -->
+  <!-- Warning Triangle (Left) -->
+  <g id="warning-triangle" transform="translate(75, 75)">
+    <!-- Red Triangle Base -->
+    <path d="M 125,22 L 235,212 A 16,16 0 0,1 221,232 L 29,232 A 16,16 0 0,1 15,212 L 125,22 Z" 
+          fill="#E52222" stroke="#E52222" stroke-width="16" stroke-linejoin="round" />
+    <!-- Inner White Triangle Outline -->
+    <path d="M 125,48 L 217,212 L 33,212 Z" 
+          fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linejoin="round" />
+    <!-- White Exclamation Mark -->
+    <rect x="115.5" y="82" width="19" height="76" rx="9.5" ry="9.5" fill="#FFFFFF" />
+    <circle cx="125" cy="186" r="11" fill="#FFFFFF" />
+  </g>
+
+  <!-- Title Text -->
+  <g class="bold-condensed" transform="translate(370, 142)">
+    <text x="0" y="0" font-size="52" letter-spacing="1.5">ОБ'ЄКТ</text>
+    <text x="0" y="66" font-size="43" letter-spacing="0.5">НЕ ЗАБЕЗПЕЧЕНИЙ</text>
+    <text x="0" y="134" font-size="52" letter-spacing="1.5">УКРИТТЯМ!</text>
+  </g>
+
+  <!-- ================= DIVIDER LINE ================= -->
+  <line x1="55" y1="355" x2="945" y2="355" stroke="#111111" stroke-width="5" />
+
+  <!-- ================= BOTTOM SECTION ================= -->
+  <!-- Left: "Найближче укриття знаходиться за адресою:" -->
+  <g class="addr-title" transform="translate(65, 435)">
+    <text x="0" y="0">Найближче укриття</text>
+    <text x="0" y="38">знаходиться за адресою:</text>
+  </g>
+
+  <!-- Right: Address Details -->
+  <g transform="translate(425, 435)">
+    <text class="addr-text" x="0" y="0">пр-т Відрадний, 16/50</text>
+    <text class="addr-sub" x="0" y="40">у цьому будинку (біля 8-го під'їзду)</text>
+  </g>
+
+</svg>
